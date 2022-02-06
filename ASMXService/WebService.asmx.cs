@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ASMXService.Model;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.Services;
 
 namespace ASMXService
@@ -103,37 +100,4 @@ namespace ASMXService
             connection.Close();
         }
     }
-    public class Employer
-    {
-        public int Id { get; set; } 
-        public string Name { get; set; }
-        public string LastName { get; set; }
-        public int Department_Id { get; set; }
-        public Employer(int id, string name, string lastName, int department_Id)
-        {
-            Id = id;
-            Name = name;
-            LastName = lastName;
-            Department_Id = department_Id;
-        }
-        public Employer()
-        {
-
-        }
-    }
-    public class Department
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public Department(int id, string name)
-        {
-            Id = id;
-            Name = name;
-        }
-        public Department()
-        {
-
-        }
-    }
-
 }

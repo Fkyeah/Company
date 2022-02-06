@@ -1,8 +1,5 @@
-﻿using System.Data;
-using System.Data.SqlClient;
-using System.Windows;
-using System.Linq;
-using System.Windows;
+﻿using System.Windows;
+using Company.Model;
 
 namespace Company
 {
@@ -13,7 +10,6 @@ namespace Company
     {
         private WebService.WebServiceSoapClient _serviceClient;
         private WebService.Employer _emp;
-        private Department _department;
 
         public MainWindow()
         {
