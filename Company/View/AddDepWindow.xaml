@@ -5,7 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Company"
         mc:Ignorable="d"
-        Title="AddDepWindow" Height="300" Width="600" Loaded="Window_Loaded">
+        Title="AddDepWindow" 
+        Height="300" 
+        Width="600" 
+        Loaded="Window_Loaded"
+        >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
@@ -17,17 +21,77 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="editGrid" Grid.ColumnSpan="2">
-
-        </Grid>
-        <Label Content="Введите название нового департамента:" Margin="10" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBox x:Name="DepartmentTextBox" Margin="10" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Height="23" Width="200"/>
-        <Button x:Name="saveButton" IsDefault="True" Content="Сохранить" Margin="10" Grid.Row="4" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="75" Click="saveButton_Click"/>
-        <Button x:Name="cancelButton" IsCancel="True" Content="Выйти" Margin="10" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" Width="75" Click="cancelButton_Click"/>
-        <DataGrid x:Name="DepDataGrid" AutoGenerateColumns="False" Margin="0 20 20 -60" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" IsReadOnly="True" Width="200" Height="220" ItemsSource="{Binding}" Grid.RowSpan="3">
+        <Grid 
+            x:Name="editGrid" 
+            Grid.ColumnSpan="2"
+            />
+        <Label 
+            Content="Введите название нового департамента:" 
+            Margin="10" 
+            Grid.Row="1" 
+            Grid.Column="0" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center"
+            />
+        <TextBox 
+            x:Name="DepartmentTextBox" 
+            Margin="10" 
+            Grid.Row="2"
+            Grid.Column="0" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Height="23" 
+            Width="200"
+            />
+        <Button 
+            x:Name="saveButton" 
+            IsDefault="True" 
+            Content="Сохранить" 
+            Margin="10" 
+            Grid.Row="4" 
+            HorizontalAlignment="Left"  
+            VerticalAlignment="Center" 
+            Width="75" 
+            Click="saveButton_Click"
+            />
+        <Button 
+            x:Name="cancelButton" 
+            IsCancel="True" 
+            Content="Выйти" 
+            Margin="10" 
+            Grid.Row="4" 
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Center" 
+            Width="75" 
+            Click="cancelButton_Click"
+            />
+        <DataGrid 
+            x:Name="DepDataGrid" 
+            AutoGenerateColumns="False" 
+            Margin="0 20 20 -60" 
+            Grid.Row="0" 
+            Grid.Column="1" 
+            HorizontalAlignment="Center" 
+            IsReadOnly="True" 
+            Width="200" 
+            Height="220" 
+            ItemsSource="{Binding}" 
+            Grid.RowSpan="3"
+            >
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="Department_Id" Binding="{Binding Id}" Header="Id" IsReadOnly="True" Width="0.5*"/>
-                <DataGridTextColumn x:Name="Department_Name" Binding="{Binding Name}" Header="Name" IsReadOnly="True" Width="2*"/>
+                <DataGridTextColumn 
+                    x:Name="Department_Id" 
+                    Binding="{Binding Id}" 
+                    Header="Id" 
+                    IsReadOnly="True" 
+                    Width="0.5*"/>
+                <DataGridTextColumn 
+                    x:Name="Department_Name" 
+                    Binding="{Binding Name}" 
+                    Header="Name" 
+                    IsReadOnly="True" 
+                    Width="2*"
+                    />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
